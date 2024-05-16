@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
 
 *{
     font-family: "Radio Canada Big", sans-serif;
@@ -85,7 +85,7 @@ body{
     border-radius: 3px;
 
 } */
-
+/*
 .input-box label{
 
     font-size:1rem;
@@ -157,6 +157,7 @@ body{
 }
 
 /*onde aparecera o resultado do imc*/
+/*
 #imc{
 
     display: flex;
@@ -187,6 +188,7 @@ body{
 }
 
 /*classe para sumir, e voltar somente quando ativado*/
+/*
 .hidden{
     display: none;
 }
@@ -209,4 +211,225 @@ body{
     font-size: 15px;
     text-decoration: none;
 
+} */
+* {
+    font-family: "Radio Canada Big", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 4rem;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.input-box label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background-color: #f1f3f8;
+    border-radius: 3px;
+    margin-top: 10px;
+    width: 270px;
+}
+
+.input-field i,
+.input-field span {
+    color: #666;
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 10rem;
+    font-size: 1.6rem;
+    color: #333;
+    padding: 0.5rem;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#calcular {
+    border: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    width: 10rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calcular:hover {
+    background-color: #555;
+}
+
+#result {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid #ccc;
+
+    padding: 1rem 0;
+    width: 270px;
+}
+
+#imc {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+#imc span:last-child {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+#more-info {
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+#more-info a {
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+
+}
+
+.dark-mode {
+    background-color: #221e29;
+    color: #fff;
+}
+
+.dark-mode #calculadora {
+    background-color: #24243f;
+    color: #ddd;
+}
+
+.dark-mode .input-box label {
+    color: #ddd;
+}
+
+.dark-mode .input-field {
+    background-color: #33334e;
+}
+
+.dark-mode .input-field i,
+.dark-mode .input-field span {
+    color: #ddd;
+}
+
+.dark-mode .input-field input {
+    color: #fff;
+}
+
+.dark-mode #calcular {
+    background-color: #241436;
+    color: #cfcfcf;
+}
+
+.dark-mode #calcular:hover {
+    background-color: #463052;
+}
+
+.dark-mode #result {
+    border-top: 1px solid #c4c4c4;
+}
+
+.dark-mode #imc span:last-child {
+    color: #cfcfcf;
+}
+
+.dark-mode #more-info a {
+    color: #7373c5;
+    
+
+}
+
+.dark-mode #more-info{
+    border-top: 1px solid #c4c4c4;
+    
+}
+
+
+#modo-escuro {
+
+    padding: 10px;
+    background-color: transparent;
+    color: #706f6f;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 4px;
+}
+
+#modo-escuro:hover {
+    color: #b4b4b4;
+}
+
+
+
+
+
