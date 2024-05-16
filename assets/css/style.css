@@ -212,6 +212,7 @@ body{
     text-decoration: none;
 
 } */
+/* CSS Base */
 * {
     font-family: "Radio Canada Big", sans-serif;
     margin: 0;
@@ -225,34 +226,38 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f3f4f6;
+    margin: 0 1rem;
 }
 
 #container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 3.5rem;
+    gap: 1.5rem;
 }
 
 #calculadora {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 4rem;
+    gap: 1.5rem;
+    padding: 2rem;
     color: #333;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
 #form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
 }
 
 #title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
@@ -266,22 +271,27 @@ body {
     align-items: center;
     background-color: #f1f3f8;
     border-radius: 3px;
-    margin-top: 10px;
-    width: 270px;
+    margin-top: 14px;
+    width: 100%;
 }
 
 .input-field i,
 .input-field span {
     color: #666;
     font-size: 1.3rem;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem;
+}
+
+.input-field i{
+    margin-left: 10px;
+
 }
 
 .input-field input {
     background-color: transparent;
     border: none;
-    width: 10rem;
-    font-size: 1.6rem;
+    width: 100%;
+    font-size: 1.25rem;
     color: #333;
     padding: 0.5rem;
 }
@@ -291,32 +301,37 @@ body {
 }
 
 #calcular {
+    margin-top: 10px;
     border: none;
     font-weight: bold;
     font-size: 1.25rem;
     background-color: #333;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 3px;
-    width: 10rem;
+    width: 100%;
+    max-width: 300px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #calcular:hover {
-    background-color: #555;
+    background-color: #666666;
 }
 
 #result {
     display: flex;
-    gap: 2rem;
+    margin-left: 10px;
     align-items: center;
     border-top: 1px solid #ccc;
-
     padding: 1rem 0;
-    width: 270px;
+    width: 100%;
 }
+#description{
 
+    margin-left: 20px;
+
+}
 #imc {
     display: flex;
     align-items: center;
@@ -349,15 +364,25 @@ body {
 }
 
 .input-field input::-webkit-outer-spin-button,
-.input-field input::-webkit-inner-spin-button{
+.input-field input::-webkit-inner-spin-button {
     appearance: none;
 }
 
-.input-field input:focus {
-    outline: none;
-
+#modo-escuro {
+    padding: 10px;
+    background-color: transparent;
+    color: #706f6f;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 4px;
 }
 
+#modo-escuro:hover {
+    color: #b4b4b4;
+}
+
+/* Dark Mode */
 .dark-mode {
     background-color: #221e29;
     color: #fff;
@@ -404,32 +429,44 @@ body {
 
 .dark-mode #more-info a {
     color: #7373c5;
-    
-
 }
 
-.dark-mode #more-info{
+.dark-mode #more-info {
     border-top: 1px solid #c4c4c4;
-    
 }
 
-
-#modo-escuro {
-
-    padding: 10px;
-    background-color: transparent;
-    color: #706f6f;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    border-radius: 4px;
+/* Media Queries */
+@media (min-width: 600px) {
+    #container {
+        flex-direction: row;
+        gap: 3.5rem;
+    }
 }
 
-#modo-escuro:hover {
-    color: #b4b4b4;
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #calculadora {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #form {
+        gap: 1rem;
+    }
+
+    #calcular {
+        width: 100%;
+    }
+
+    #result {
+        width: 100%;
+    }
 }
-
-
 
 
 
