@@ -24,29 +24,29 @@ form.addEventListener("submit", function(event){
     document.getElementById('infos').classList.remove('hidden');
 
     if (imc < 18.5){
-        description = 'Cuidado! Você está abaixo do peso!';
+        description = 'Abaixo do peso';
     } 
 
     else if (imc >= 18.5 && imc <= 25) {
-        description = "Você está no peso ideal!";
+        description = "Peso Ideal";
         value.classList.remove('attention');
         value.classList.add('normal');
     }
 
     else if (imc > 25 && imc <= 30) {
-        description = "Cuidado! Você está com sobrepeso!";
+        description = "Sobrepeso";
     }
 
     else if (imc > 30 && imc <= 35) {
-        description = "Cuidado! Você está com obesidade moderada!";
+        description = "Obesidade Moderada";
     }
 
     else if (imc > 35 && imc <= 40) {
-        description = "Cuidado! Você está com obesidade severa!";
+        description = "Obesidade Severa";
     }
 
     else {
-        description = "Cuidado! Você está com obesidade morbida!";
+        description = "Obesidade Mórbida";
     }
 
     value.textContent = imc.replace('.', ',');
