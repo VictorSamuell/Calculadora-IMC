@@ -61,8 +61,6 @@ form.addEventListener('keypress', function(event) {
     }
 });
 
-
-
 // alternar entre modo escuro e claro
 const mudarModoEscuro = () => {
     const body = document.body;
